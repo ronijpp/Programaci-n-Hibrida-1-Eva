@@ -1,0 +1,7 @@
+{
+  "name": "PerimetrosApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
