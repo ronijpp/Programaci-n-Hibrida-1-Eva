@@ -1,0 +1,78 @@
+
+
+<ion-card>
+  <ion-card-header>
+    <ion-card-title>Figuras Geometricas</ion-card-title>
+    <ion-card-subtitle>Círculo</ion-card-subtitle>
+  </ion-card-header>
+
+
+
+  <ion-card-content>
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12" size-md="8" offset-md="2">
+
+    <!-- Imagen del ciruclo  -->
+
+    <div class="figure-container">
+      <div class="black-border-box">
+        <div class="figura-content">
+          <img src="assets/circulo.png.jpeg" alt="Círculo" class="figure-image">  
+          
+        </div>
+      </div>
+    </div>
+
+    <form [formGroup]="circuloForm">
+      <ion-item>
+  
+        <ion-input
+          id="radio"
+          type="number"
+          formControlName="radio"
+          placeholder="Ingrese el radio"
+          label="Radio (cm)"
+          labelPlacement="floating"
+          clearInput
+
+        ></ion-input>
+      </ion-item>
+    </form>
+
+  <!--Boton para calcular el perímetro-->
+  <ion-button
+    expand="block" 
+    type="button" 
+    (click)="calcularPerimetro()"
+    color="primary"
+    class="calculate-button"
+    >
+    <span class="button-text">CALCULAR EL PERIMETRO</span>
+  </ion-button>
+
+
+
+  <!--Resultado del perimetro-->
+  <div *ngIf="perimetro !== null" class="result-container">
+    <div class="result-box">
+
+      <span class="result-label">El perímetro es: {{ perimetro | number:'1.2-2' }} cm</span>
+
+    </div>
+  </div>
+
+  <div *ngIf="perimetro === null && circuloForm.get('radio')?.value !== ''" class="error-message">
+   
+  </div>
+    
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  </ion-card-content>
+</ion-card>
+
+

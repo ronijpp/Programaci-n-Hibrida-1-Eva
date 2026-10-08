@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+    <ion-title>Figuras Geometricas</ion-title>
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,12 +9,49 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Figuras Geometricas</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+<!--primera pantalla-->
+<div class="main-container">
+  <div class="selection-card">
+    <h2 class="selection-title">Figuras Geometricas</h2>
+
+    <div class="selection-card"></div>
+
+    <ion-item class="selection-item">
+    <ion-label>Escoja una figura geometrica</ion-label>
+    <ion-select 
+          [(ngModel)]="figuraSeleccionada"
+          (ionChange)="onFiguraSeleccionada()"
+          placeholder="Elige una figura"
+          okText="OK"
+          interface="alert"
+          [interfaceOptions]="interfaceOptions"
+          class="custom-select"
+          >
+      <ion-select-option value="circulo">Circulo</ion-select-option>
+      <ion-select-option value="triangulo">Triangulo</ion-select-option>
+      </ion-select>
+  </ion-item>
+
+
+</div>
+
+    <div id="container">
+
+    </div>
+    <div *ngIf="figuraSeleccionada === 'circulo'" class="component-container">
+      <app-circulo></app-circulo>
+    </div>
+
+    <div id="container">
+
+    </div>
+    
+    <div *ngIf="figuraSeleccionada === 'triangulo'" class="component-container">
+      <app-triangulo></app-triangulo>
+    </div>
   </div>
 </ion-content>

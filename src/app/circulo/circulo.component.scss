@@ -1,0 +1,152 @@
+.figure-container { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 16px 0;
+
+}
+
+.black-border-box {
+  border: 2px solid black;
+  border-radius: 8px;
+  padding: 6px;
+  display: inline-block;
+  background-color: #ffffff;
+  width: 100%;
+  max-width: 400px;
+}
+
+.figure-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+
+.figure-image {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  display: block;
+}
+
+.figure-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.figure-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.label-group {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+  border-bottom: 1px dashed #ddd;
+}
+
+.label-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.label-value {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+
+.calculate-button {
+  margin: 20px 0 15px 0;
+  --border-radius: 8px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.result-container {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.result-box {
+  background-color: #f0f8f0;
+  border: 1px solid #4caf50;
+  border-radius: 8px;
+  border-left: 4px solid var(--ion-color-primay);
+  padding: 15px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.result-label {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+}
+
+.result-value {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2e7d32;
+}
+
+.hidden-form {
+  display: none;
+}
+
+ion-card {
+  margin: 0;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+ion-card-content {
+  padding: 12px 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ion-card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #e9ecef;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+ion-card-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #212529;
+}
+
+ion-card-subtitle {
+  font-size: 16px;
+  color: #495057;
+}
+
+.error-message {
+  color: red;
+  margin-top: 8px;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+
+
